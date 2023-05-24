@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     
+    </style>
+
+</head>
+<body>
+<h1>Welcome, <span th:text="${adminName}"></span></h1>
+<div class="container">
+  <div class="button-container">
+    <form>
+      <button type="submit" formaction="/newproduct" class="button customer">New product</button>
+      <button type="submit" formaction="/unhandled" class="button admin">Unhandled orders</button>
+      <button type="submit" formaction="/handled" class="button admin">Handled orders</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
