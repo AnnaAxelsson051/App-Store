@@ -19,16 +19,23 @@ public class OrderController {
     OrderService orderService;
 
     @GetMapping("/unhandled")
-    public String displayUnhandledOrders(Model m) {
+    public String displayUnhandledOrders(Model model) {
         List<Orders> unhandledOrders = orderService.findUnhandledOrder(false);
-        m.addAttribute("ordersUnhandled", unhandledOrders);
+        model.addAttribute("ordersUnhandled", unhandledOrders);
         return "orders_unhandled";
     }
     @GetMapping("/handled")
-    public String displayHandledOrders(Model m) {
+    public String displayHandledOrders(Model model) {
         List<Orders> unhandledOrders = orderService.findUnhandledOrder(true);
-        m.addAttribute("ordersHandled", unhandledOrders);
+        model.addAttribute("ordersHandled", unhandledOrders);
         return "orders_handled";
     }
-
+    @PostMapping("/markOrderHandled")
+    public String setOrderAsHandled(@RequestParam Long id, Model model){
+        Orders order = orderService.getOrderById(id);
+        order.setHandled(true);
+        orderService.saveOrder(order);
+        model.addAttribute("orderHandled", order.getId());
+        return "order_set_handled";
+    }
 }
