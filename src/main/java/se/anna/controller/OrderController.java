@@ -24,6 +24,11 @@ public class OrderController {
         m.addAttribute("ordersUnhandled", unhandledOrders);
         return "orders_unhandled";
     }
-    
+    @GetMapping("/handled")
+    public String displayHandledOrders(Model m) {
+        List<Orders> unhandledOrders = orderService.findUnhandledOrder(true);
+        m.addAttribute("ordersHandled", unhandledOrders);
+        return "orders_handled";
+    }
 
 }
