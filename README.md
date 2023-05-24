@@ -1,4 +1,4 @@
-# E-Commerce-App-Store
+# E-Commerce App Store
 
 ## Description
 
