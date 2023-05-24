@@ -22,5 +22,10 @@ public class ProductController {
         model.addAttribute("product", new Product());
         return "admin_add_product";
     }
-
+    @PostMapping("/newproduct")
+    public String adminAddNewProduct(@ModelAttribute Product product, Model model){
+        productService.setProduct(product);
+        model.addAttribute("addedProduct", productService.SaveProductIfNew(product));
+        return "admin_add_product";
+    }
 }
