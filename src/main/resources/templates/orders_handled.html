@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Processed Orders</title>
+    <style>
+
+
+    </style>
+</head>
+</head>
+<body>
+<h1>Handled Orders</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Order ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="order : ${ordersHandled}">
+        <td th:text="${order.id}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
