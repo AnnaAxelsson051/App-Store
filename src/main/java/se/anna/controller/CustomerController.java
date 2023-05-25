@@ -42,4 +42,16 @@ public class CustomerController {
         return "shop";
     }
 
+    //Displaying products depending on selected category
+    @GetMapping(value = "/shop")
+    public String filterProductsByCategory(@RequestParam(name = "selectedCategory") String category,
+                                           Model model) {
+        model.addAttribute("selectedCategory", customerService.setAndGetCategory(category));
+        model.addAttribute("products", productService.getProducts(customerService.getSelectedCategory()));
+        model.addAttribute("categories", productService.getCategories());
+        model.addAttribute("cartProductList", customerService.getCart());
+        model.addAttribute("cartsum", customerService.calculateCartValue());
+        return "shop";
+    }
+
 }
