@@ -125,5 +125,17 @@ public class CustomerController {
         model.addAttribute("cartsum", customerService.calculateCartValue());
         return "shop";
     }
-    
+
+    //Customer checking out
+    @GetMapping("/checkout")
+    public String checkoutCart(Model model) {
+
+        model.addAttribute("cart", customerService.createOrder());
+        model.addAttribute("products", productService.getProducts(customerService.getSelectedCategory()));
+        model.addAttribute("categories", productService.getCategories());
+        model.addAttribute("selectedCategory", customerService.getSelectedCategory());
+        model.addAttribute("cartsum", customerService.calculateCartValue());
+        return "checkout";
+    }
+
 }
