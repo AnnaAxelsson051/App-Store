@@ -67,4 +67,26 @@ public class CustomerController {
         return "shop";
     }
 
+
+    //Adding a product to cart
+    @PostMapping("/addproduct")
+    public String addProductToCart(@RequestParam Long productId,
+                                   @RequestParam String productName,
+                                   @RequestParam String price,
+                                   @RequestParam String quantity,
+                                   Model model) {
+        customerService.addProductToCart(
+                productId,
+                productName,
+                price,
+                quantity
+        );
+        model.addAttribute("products", productService.getProducts(customerService.getSelectedCategory()));
+        model.addAttribute("categories", productService.getCategories());
+        model.addAttribute("cartProductList", customerService.getCart());
+        model.addAttribute("selectedCategory", customerService.selectAll());
+        model.addAttribute("cartsum", customerService.calculateCartValue());
+        return "shop";
+    }
+
 }
