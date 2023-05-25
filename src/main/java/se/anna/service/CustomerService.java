@@ -99,5 +99,17 @@ public class CustomerService {
 
         return returnSum;
     }
-    
+
+    // Creating an order receiving the list of cartproducts
+    //Adding customer id and cartproducts to the order and
+    //saving order returnig a list of cartproducts to caller
+
+    public List<CartProduct> createOrder() {
+        Orders orders = new Orders();
+        orders.setCustomer_id(this.selectedCustomer.getId());
+        orders.addOrderLine(this.cartProducts);
+        orderRepository.save(orders);
+        return this.cartProducts;
+    }
+
 }
