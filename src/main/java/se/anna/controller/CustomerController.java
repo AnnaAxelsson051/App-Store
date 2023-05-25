@@ -89,4 +89,17 @@ public class CustomerController {
         return "shop";
     }
 
+
+    // Deleting a product from the cart
+    @PostMapping("/deleteproduct")
+    public String deleteProductInCart(@RequestParam int indexToRemove,
+                                      Model model) {
+        model.addAttribute("products", productService.getProducts(customerService.getSelectedCategory()));
+        model.addAttribute("categories", productService.getCategories());
+        model.addAttribute("cartProductList", customerService.removeItemInCart(indexToRemove));
+        model.addAttribute("selectedCategory", customerService.getSelectedCategory());
+        model.addAttribute("cartsum", customerService.calculateCartValue());
+        return "shop";
+    }
+
 }
