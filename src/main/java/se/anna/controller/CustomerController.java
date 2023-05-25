@@ -102,4 +102,28 @@ public class CustomerController {
         return "shop";
     }
 
+
+    //Decreasing and increasing quantity in cart
+    @PostMapping("/decreasequantity")
+    public String decreaseProductQuantityInCart(@RequestParam int indexToModify,
+                                                Model model) {
+        model.addAttribute("products", productService.getProducts(customerService.getSelectedCategory()));
+        model.addAttribute("categories", productService.getCategories());
+        model.addAttribute("cartProductList", customerService.decreaseQuantityInCart(indexToModify));
+        model.addAttribute("selectedCategory", customerService.getSelectedCategory());
+        model.addAttribute("cartsum", customerService.calculateCartValue());
+        return "shop";
+    }
+
+    @PostMapping("/increasequantity")
+    public String increaseProductQuantityInCart(@RequestParam int indexToModify,
+                                                Model model) {
+        model.addAttribute("products", productService.getProducts(customerService.getSelectedCategory()));
+        model.addAttribute("categories", productService.getCategories());
+        model.addAttribute("cartProductList", customerService.increaseQuantityInCart(indexToModify));
+        model.addAttribute("selectedCategory", customerService.getSelectedCategory());
+        model.addAttribute("cartsum", customerService.calculateCartValue());
+        return "shop";
+    }
+    
 }
