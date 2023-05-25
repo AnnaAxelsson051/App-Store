@@ -14,6 +14,30 @@ public class ProductService {
     @Autowired
     ProductRepository productRepository;
 
+    public List<Product> getAllProducts() {
+        return productRepository.findAll();
+    }
+
+    public List<Product> getProductByCategory(String category) {
+        return productRepository.findProductsByCategory(category);
+    }
+
+    public List<Product> getProductByName(String name) {
+        return productRepository.findProductByName(name);
+    }
+
+    public List<String> getCategories() {
+        return productRepository.findAllCategories();
+    }
+
+    public List<Product> getProducts(String category) {
+        if (category.equals("all")) {
+            return getAllProducts();
+        } else {
+            return getProductByCategory(category);
+        }
+    }
+
     /*Admin updating products*/
 
     public void setProduct(Product product) {
