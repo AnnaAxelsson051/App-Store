@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+        .container {
+            /*border-radius: 10px;*/
+            /*background-color: rgba(33, 150, 243, 0.39);*/
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+            margin: 5rem;
+
+        }
+
+        .cell {
+            margin-top: 2px;
+            margin-bottom: 2px;
+
+        }
+
+        .grid {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: 1fr 0.5fr 1fr;
+        }
+
+
+        .cart-line {
+            width: auto;
+            height: 2px;
+            /*background-color: rgba(1, 1, 1, 0.29);*/
+            background-color: white;
+            margin: 20px 10px 10px 20px;
+        }
+
+        .cart-sum {
+            display: flex;
+            margin-right: 65px;
+            margin-top: 15px;
+        }
+/*
+        #cube {
+            margin: 5rem;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: spin 20s linear infinite;
+        }
+
+        #cube > div {
+            position: absolute;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes spin {
+            from { transform: rotateX(-0.1turn) rotateY(0turn); }
+            to { transform: rotateX(-0.1turn) rotateY(1turn); }
+        }
+
+        #cube > div > div {
+            animation: un-spin 20s linear infinite;
+        }
+
+        @keyframes un-spin {
+            from { transform: rotateY(0turn); }
+            to { transform: rotateY(-1turn); }
+        }
+*/
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="grid">
+        <h2>Name</h2>
+        <h2>Quantity</h2>
+        <h2>Price</h2>
+    </div>
+    <div class="cart-line"></div>
+    <div th:each="p : ${cart}" class="grid">
+        <p th:text="${p.getProductName()}" class="cell"></p>
+        <p th:text="${p.getQuantity()}" class="cell"></p>
+        <p th:text="${p.getTotPrice()}" class="cell"></p>
+    </div>
+    <div class="cart-line"></div>
+    <div class="cart-sum">
+        <p>Total :&nbsp;</p>
+        <p th:text="${cartsum}"></p>
+    </div>
+</div>
+</body>
+</html>
