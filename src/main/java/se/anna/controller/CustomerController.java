@@ -54,4 +54,17 @@ public class CustomerController {
         return "shop";
     }
 
+    //Allowing user to search for specific product
+    @GetMapping("/search")
+    public String filterProductByProductName(@RequestParam(name = "searchProductName") String queryName,
+                                             Model model) {
+        model.addAttribute("selectedCategory", customerService.getSelectedCategory());
+        model.addAttribute("products", productService.getProductByName(queryName));
+        model.addAttribute("categories", productService.getCategories());
+        model.addAttribute("cartProductList", customerService.getCart());
+        model.addAttribute("cartsum", customerService.calculateCartValue());
+
+        return "shop";
+    }
+
 }
