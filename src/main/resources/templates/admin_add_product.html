@@ -2,12 +2,118 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
+            rel="stylesheet"
+    />
     <title>Title</title>
     <style>
-      
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+            padding: 30px 40px;
+        }
+
+        .add-product {
+            font-size: 50px;
+            font-weight: bold;
+            color:white;
+            /*font-family: "Pinyon Script";*/
+            font-family: "Raleway";
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            /*border-radius: 10px;*/
+            font-family: "Raleway", sans-serif;
+        }
+
+
+
+        h3 {
+            padding-top: 4%;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Raleway", sans-serif;
+        }
+
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            /*border-radius: 5px;*/
+            font-size: 16px;
+            font-family: "Raleway", sans-serif;
+        }
+
+
+        input[type="submit"] {
+            background-color: red;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+           /* border-radius: 5px;*/
+            font-size: 16px;
+            cursor: pointer;
+            font-family: "Raleway", sans-serif;
+        }
+
+
+        p {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Raleway", sans-serif;
+        }
+
+
+        .button-link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+                .button-link {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: green;
+                    color: #fff;
+                    border: none;
+                    font-size: 16px;
+                    cursor: pointer;
+                    font-family: "Raleway", sans-serif;
+                    text-decoration: none;
+                    margin-top: 1%;
+                }
+
+
+
+        .button-link:hover {
+            background-color: blue;
+        }
     </style>
 </head>
 <body>
+<nav>
+    <p class="add-product">Add Product</p>
+</nav>
 <h3>New product</h3>
 <form th:action="@{/newproduct}" method="post" th:object="${product}">
     Name: <input type="text" th:field="*{name}" />
