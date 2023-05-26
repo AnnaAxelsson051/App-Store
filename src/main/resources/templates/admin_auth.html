@@ -2,12 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
+            rel="stylesheet"
+    />
     <title>Title</title>
     <style>
-     
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+            padding: 30px 40px;
+        }
+
+        .admin-home {
+            font-size: 50px;
+            font-weight: bold;
+            color:white;
+            /*font-family: "Pinyon Script";*/
+            font-family: "Raleway";
+        }
+
+        body {
+            background-color: #f1f1f1;
+            font-family: "Raleway", sans-serif;
+        }
+        form {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0px 0px 10px #888888;
+            margin: 100px auto;
+            width: 400px;
+        }
+        input[type=text], input[type=password] {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: none;
+            box-shadow: 0px 0px 5px #888888;
+        }
+        input[type=submit] {
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+            width: 100%;
+            box-shadow: 0px 0px 5px #888888;
+            transition: all 0.3s ease;
+        }
+        input[type=submit]:hover {
+            background-color: #2196f3;
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            text-align: center;
+            color: blue;
+            margin-bottom: 20px;
+        }
+        label {
+            color: green;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
+<nav>
+    <p class="admin-home">Admin Login</p>
+</nav>
 <form th:action="@{/adminauth}" method="post">
   <h2>Login</h2>
   <label for="username">Username</label>
