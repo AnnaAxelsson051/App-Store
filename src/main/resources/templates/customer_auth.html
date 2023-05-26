@@ -25,6 +25,8 @@
             padding: 30px 40px;
         }
 
+
+
         .customer-login {
             font-size: 50px;
             font-weight: bold;
@@ -55,10 +57,12 @@
             box-shadow: 0px 0px 5px #888888;
         }
         input[type=submit] {
-            background-color: green;
-            color: yellow;
+            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+            color: white;
             padding: 15px;
             margin-top: 20px;
+            font-size: 20px;
+            font-weightt:400;
             border: none;
             cursor: pointer;
             width: 100%;
@@ -67,17 +71,21 @@
             transition: all 0.3s ease;
         }
         input[type=submit]:hover {
-            background-color: #2196f3;
-            transform: translateY(-5px);
+            /*background-color: #2196f3;*/
+            background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
+            transform: translateY(-3px);
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
         }
         h2 {
             text-align: center;
-            color: #33a7cc;
+            /*color: #33a7cc;*/
+            /*color: #a69064;*/
+            color:black;
             margin-bottom: 20px;
         }
         label {
-            color: #666666;
+            /*color: #666666;*/
+            color:black;
             font-size: 16px;
             font-weight: bold;
             margin-bottom: 5px;
@@ -86,7 +94,7 @@
 </head>
 <body>
 <nav>
-    <p class="customer-login">Customer Login</p>
+    <p class="customer-login">App store</p>
 </nav>
 <form th:action="@{/shop}" method="post">
   <h2>Login</h2>
