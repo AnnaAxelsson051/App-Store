@@ -2,12 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
+            rel="stylesheet"
+    />
     <title>Title</title>
     <style>
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+            padding: 30px 40px;
+        }
+
+        .handled-orders {
+            font-size: 50px;
+            font-weight: bold;
+            color:white;
+            /*font-family: "Pinyon Script";*/
+            font-family: "Raleway";
+        }
+
+        body {
+            background-color: white;
+            font-family: "Raleway", sans-serif;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+/*
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+        }*/
+
+        h5 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            /*background-color: blue;*/
+            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
+<nav>
+    <p class="handled-orders">Admin Home</p>
+</nav>
 <div class="container">
     <h1>Handled order</h1>
     <h5 th:text="${orderHandled}"></h5>
