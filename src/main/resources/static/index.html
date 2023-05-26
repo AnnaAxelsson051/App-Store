@@ -38,12 +38,22 @@
             font-family: "Raleway";
         }
 
+        h2 {
+            font-size: 30px;
+            font-weight: 800;
+        }
+
         .main-text {
             width: 50%;
             padding: 30px;
             margin-bottom: 60px;
             margin-top:40px;
+            line-height: 1.5;
+            font-weight:600;
+        }
 
+        .descriptive-text{
+         font-weight:400;    
         }
 
         a {
@@ -244,7 +254,6 @@
         #html {
             left: 50px;
             bottom: 10px;
-            background-image: url("/images/html-square1.png");
             background-size: cover;
             background-color: rgb(175, 119, 227);
             box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
@@ -261,11 +270,6 @@
 
 
 
-
-        h2{
-           margin:20px;
-        }
-
         .app-store {
             font-size: 50px;
             font-weight: bold;
@@ -279,20 +283,6 @@
             color: black;
         }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .button-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-top: 20px;
-        }
 
         .button-nav {
             display: inline-block;
@@ -330,38 +320,7 @@
            /* background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);*/
             margin-right: 30px;
         }
-/*
-        .button {
-            display: inline-block;
-            font-size: 24px;
-            font-weight: bold;
-            padding: 20px 40px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            flex: 1;
-            margin: 0 10px;
-            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
-            border: none;
-            color: white;
-        }
 
-        .button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
-            background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
-        }
-
-        .customer {
-
-            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
-            margin-right: 10px;
-        }
-
-        .admin {
-
-            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
-            margin-left: 10px;
-        }*/
 
     </style>
 </head>
@@ -379,11 +338,11 @@
 </nav>
 <section class="main">
     <div class="main-text">
-        <h2>Welcome to my App Store!</h2>
+        <h2>Welcome to my App Store</h2>
         <br/>
-        <p>Here you can find a variety of Apps written in different languages.
-            From simpler to more advanced. From bare bone backend solutions to Apps
-            with styled user interfaces to Web Applications and database scripts.
+        <p class="descriptive-text">Here you can find a variety of Apps written in different programming languages.
+            From simpler ones to more advanced. From bare bone backend solutions, to Apps
+            with styled user interfaces, to Web Applications and database scripts.
         </p>
         <br/>
         <!--So it scrolls to the footer (with email) that has id= footer when clicked-->
