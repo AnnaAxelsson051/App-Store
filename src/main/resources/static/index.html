@@ -43,6 +43,56 @@
             font-weight: 800;
         }
 
+          h2 {
+            display: block;
+            animation-name: moveInLeft;
+            animation-duration: 5s;
+            animation-timing-function: ease-out;
+            backface-visibility: hidden;
+            font-family: Raleway;
+            /*gör så att texten inte studsar i slutet om den skulle göra det*/
+          }
+
+          .descriptive-text {
+            display: block;
+            animation: moveInRight 5s ease-out;
+            font-family: Raleway;
+          }
+
+
+          @keyframes moveInLeft {
+            0% {
+              opacity: 0;
+              /*att den först ska va osynlig*/
+              transform: translateX(-100px);
+              /*translates it in the x direction, and makes it be more to the left on x asis*/
+            }
+            80% {
+              transform: translatex(10px);
+              /*så att den lite innan den slutar (på 80%) studsar till vänster*/
+            }
+            100% {
+              opacity: 1;
+              transform: translate(0);
+            }
+          }
+
+          @keyframes moveInRight {
+            0% {
+              opacity: 0;
+              transform: translateX(100px);
+            }
+            80% {
+              transform: translatex(-10px);
+            }
+            100% {
+              opacity: 1;
+              transform: translate(0);
+            }
+          }
+
+
+
         .main-text {
             width: 50%;
             padding: 30px;
