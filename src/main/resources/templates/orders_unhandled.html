@@ -2,18 +2,40 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
+          rel="stylesheet"
+  />
   <title>Unprocessed Orders</title>
   <style>
-    /*
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+      padding: 30px 40px;
+    }
+
+    .unhandled-orders {
+      font-size: 50px;
+      font-weight: bold;
+      color:white;
+      /*font-family: "Pinyon Script";*/
+      font-family: "Raleway";
+    }
+
+
     body {
-      background-color: #c0ccc0;
-      font-family: Arial, sans-serif;
+      background-color: white;
+      font-family: "Raleway", sans-serif;
       color: white;
     }
 
@@ -30,7 +52,7 @@
       width: 80%;
       margin: 0 auto;
       border-collapse: collapse;
-      background-color: #c1c9c1;
+      background-color: white;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
     }
@@ -42,7 +64,7 @@
     }
 
     th {
-      background-color: #7d8d85;
+      background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
       color: white;
       font-size: 24px;
       font-weight: bold;
@@ -59,10 +81,9 @@
     input[type="hidden"], button[type="submit"] {
       display: inline-block;
       padding: 10px 20px;
-      border-radius: 5px;
       border: none;
-      background-color: #bba0ad;
-      color: #efebeb;
+      background-color: lawngreen;
+      color: white;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
@@ -71,11 +92,14 @@
 
     button[type="submit"]:hover {
       background-color: #50636b;
-    }*/
+    }
   </style>
 </head>
 <body>
-<h1>Unhandled Orders</h1>
+<nav>
+  <p class="unhandled-orders">Unhandled orders</p>
+</nav>
+<!--<h1>Unhandled Orders</h1>-->
 <table>
   <thead>
   <tr>
