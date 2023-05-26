@@ -2,15 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
+            rel="stylesheet"
+    />
     <title>Title</title>
     <style>
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+            padding: 30px 40px;
+        }
+
+        .order-confirmation {
+            font-size: 50px;
+            font-weight: bold;
+            color:white;
+            /*font-family: "Pinyon Script";*/
+            font-family: "Raleway";
+        }
 
         .container {
-            /*border-radius: 10px;*/
-            /*background-color: rgba(33, 150, 243, 0.39);*/
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+            color: white;
+            /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);*/
+            box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
             margin: 5rem;
 
         }
@@ -42,37 +68,15 @@
             margin-right: 65px;
             margin-top: 15px;
         }
-/*
-        #cube {
-            margin: 5rem;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: spin 20s linear infinite;
-        }
 
-        #cube > div {
-            position: absolute;
-            transform-style: preserve-3d;
-        }
-
-        @keyframes spin {
-            from { transform: rotateX(-0.1turn) rotateY(0turn); }
-            to { transform: rotateX(-0.1turn) rotateY(1turn); }
-        }
-
-        #cube > div > div {
-            animation: un-spin 20s linear infinite;
-        }
-
-        @keyframes un-spin {
-            from { transform: rotateY(0turn); }
-            to { transform: rotateY(-1turn); }
-        }
-*/
 
     </style>
 </head>
 <body>
+<nav>
+    <p class="order-confirmation">Order Confirmation</p>
+</nav>
+
 <div class="container">
 
     <div class="grid">
