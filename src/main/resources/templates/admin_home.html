@@ -2,22 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
+            rel="stylesheet"
+    />
     <title>Title</title>
     <style>
-     
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
+            padding: 30px 40px;
+        }
+
+        .admin-home {
+            font-size: 50px;
+            font-weight: bold;
+            color:white;
+            /*font-family: "Pinyon Script";*/
+            font-family: "Raleway";
+        }
+
+    body {
+        background-color: white;
+        font-family: "Raleway", sans-serif;
+        color: white;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 45vh;
+        margin-bottom:20px;
+    }
+
+    h1 {
+        padding-top: 7%;
+        font-size: 48px;
+        /*font-weight: bold;*/
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        padding:20px;
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    }
+
+    .button {
+        display: inline-block;
+        font-size: 24px;
+        padding: 20px 40px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex: 1;
+        margin: 0 10px;
+        background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+        border: none;
+        color: white;
+    }
+
+    .button:hover {
+        transform: translateY(-5px);
+        background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+    }
+
+    .product-button {
+        margin-right: 10px;
+    }
+
+    .order-button {
+        margin-left: 10px;
+    }
     </style>
 
 </head>
 <body>
+<nav>
+    <p class="admin-home">Admin Home</p>
+</nav>
 <h1>Welcome, <span th:text="${adminName}"></span></h1>
 <div class="container">
+    <div class="outer-container">
   <div class="button-container">
     <form>
-      <button type="submit" formaction="/newproduct" class="button customer">New product</button>
-      <button type="submit" formaction="/unhandled" class="button admin">Unhandled orders</button>
-      <button type="submit" formaction="/handled" class="button admin">Handled orders</button>
+      <button type="submit" formaction="/newproduct" class="button product-button">New product</button>
+      <button type="submit" formaction="/unhandled" class="button order-button">Unhandled orders</button>
+      <button type="submit" formaction="/handled" class="button order-button">Handled orders</button>
     </form>
   </div>
+    </div>
 </div>
 </body>
 </html>
