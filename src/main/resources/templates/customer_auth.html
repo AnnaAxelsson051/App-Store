@@ -46,6 +46,38 @@
             margin: 100px auto;
             width: 400px;
         }
+
+        h2 {
+            text-align: center;
+            /*color: #33a7cc;*/
+            /*color: #a69064;*/
+            color:black;
+            margin-bottom: 20px;
+            animation-name: moveInLeft;
+            animation-duration: 5s;
+            animation-timing-function: ease-out;
+            backface-visibility: hidden;
+
+        }
+
+        @keyframes moveInLeft {
+            0% {
+                opacity: 0;
+                /*att den först ska va osynlig*/
+                transform: translateX(-100px);
+                /*translates it in the x direction, and makes it be more to the left
+              }
+              80% {
+                transform: translatex(10px);
+                /*så att den lite innan den slutar (på 80%) studsar till vänster*/
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+
+
         input[type=text], input[type=password] {
             padding: 10px;
             margin: 10px 0;
@@ -76,13 +108,7 @@
             transform: translateY(-3px);
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
         }
-        h2 {
-            text-align: center;
-            /*color: #33a7cc;*/
-            /*color: #a69064;*/
-            color:black;
-            margin-bottom: 20px;
-        }
+
         label {
             /*color: #666666;*/
             color:black;
