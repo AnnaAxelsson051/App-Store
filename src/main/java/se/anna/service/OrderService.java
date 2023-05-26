@@ -16,6 +16,13 @@ public class OrderService {
     public List<Orders> findUnhandledOrder(boolean isHandled) {
         return orderRepository.findByHandled(isHandled);
     }
-    
 
+
+    public Orders getOrderById(Long id) {
+        return orderRepository.getProductOrderById(id);
+    }
+
+    public void saveOrder(Orders order){
+        orderRepository.save(order);
+    }
 }

@@ -56,4 +56,15 @@ public class CartProduct {
         return id;
     }
 
+    public void incrQuantity() {
+        int number = Integer.valueOf(this.quantity);
+        number++;
+        this.quantity = String.valueOf(number);
+    }
+    public void decrQuantity() {
+        int number = Integer.valueOf(this.quantity);
+        number--;
+        this.quantity = String.valueOf(number);
+    }
+
 }

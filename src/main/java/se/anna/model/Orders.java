@@ -47,6 +47,17 @@ public class Orders {
     public List<OrderLine> getOrderLineList() {
         return this.orderLineList;
     }
-    
+
+    public void addOrderLine(List<CartProduct> cartProducts) {
+
+        for (CartProduct p : cartProducts) {
+            OrderLine orderLine = new OrderLine();
+            orderLine.setProductName(p.getProductName());
+            orderLine.setQuantity(p.getQuantity());
+            orderLine.setTimestamp();
+            orderLine.setOrders(this);
+            orderLineList.add(orderLine);
+        }
+    }
 }
 

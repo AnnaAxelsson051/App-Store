@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import se.anna.service.AdminService;
-import se.anna.service.ProductService;
 
 @Controller
 public class AdminController {
@@ -16,7 +15,6 @@ public class AdminController {
 
     @Autowired
     AdminService adminService;
-
 
     @GetMapping("/adminauth")
     public String authenticateAdmin() {

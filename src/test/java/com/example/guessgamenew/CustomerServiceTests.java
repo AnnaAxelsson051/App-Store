@@ -1,2 +1,5 @@
-package com.example.guessgamenew;public class CustomerServiceTests {
+package com.example.guessgamenew;
+
+public class CustomerServiceTests {
+
 }
