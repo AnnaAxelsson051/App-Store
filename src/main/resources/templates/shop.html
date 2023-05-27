@@ -82,192 +82,6 @@
        }
 
 
-/*** Hero section ***/
-
-/*** text ***/
-.main {
-    height: 70vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /*padding: 30px;*/
-    padding: 10px;
-    font-family: "Raleway";
-}
-
-.main-text {
-    width: 50%;
-    padding: 30px;
-    margin-bottom: 60px;
-
-}
-
-a {
-    color:rgb(162, 0, 255);
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 300;
-}
-
-/*** Image ***/
-
-.hero-image {
-    position: relative;
-    width: 50%;
-    height: 350px;
-    margin-right:20px;
-    display: block;
-    /*margin-bottom: 80px;*/
-    margin-bottom: 140px;
-}
-
-.cube {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    transform: rotate(-25deg) skew(25deg);
-
-}
-
-.js{
-    font-size: 45px;
-    font-weight: bold;
-    color:white;
-    font-family: "Raleway";
-    margin-top:25px;
-    margin-left:15px;
-}
-
-.cube:before {
-    position: absolute;
-    content: "";
-    width: 21px;
-    height: 100%;
-    transform: skewY(-45deg);
-    left: -20px;
-    bottom: -10px;
-}
-
-.cube:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 21px;
-    transform: skewX(-45deg);
-    left: -10px;
-    bottom: -20px;
-}
-
-/********************* FLOATING ICONS ***********************/
-
-#java {
-    left: 100px;
-    bottom:150px;
-    background-image: url("/images/java51.png");
-    background-size: cover;
-    background-color: white;
-    box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
-}
-
-#java:before {
-    background-color: rgb(182, 195, 207);
-
-}
-
-#java:after {
-    background-color: rgb(200, 208, 221);
-}
-
-#css {
-    left: 250px;
-    bottom: 240px;
-    background-image: url("/images/css-square1.png");
-    background-size: cover;
-    background-color: rgb(227, 119, 191);
-    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
-}
-
-#css:before {
-    background-color: rgb(221, 154, 207);
-}
-
-#css:after {
-    background-color: rgb(221, 188, 211);
-}
-
-#javascript {
-    left: 450px;
-
-    bottom: 200px;
-    background-image: url("/images/javascript-square1.png");
-    background-size: cover;
-    background-color: rgb(119, 227, 186);
-    box-shadow: -40px 40px 20px rgb(50 50 50/ 15%);
-}
-
-#javascript:before {
-    background-color: rgb(154, 221, 202);
-}
-
-#javascript:after {
-    background-color: rgb(188, 221, 212);
-}
-
-
-#react {
-    left: 270px;
-    bottom: 5px;
-    background-image: url("/images/react-square1.png");
-    background-size: cover;
-    background-color: rgb(119, 193, 227);
-    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
-}
-
-#react:before {
-    background-color: rgb(154, 189, 221);
-}
-
-#react:after {
-    background-color: rgb(188, 200, 221);
-}
-
-#csharp {
-    left: 480px;
-    bottom: 20px;
-    background-image: url("/images/csharp21.png");
-    background-size: cover;
-    background-color: rgb(249, 250, 250);
-    box-shadow: -80px 80px 20px rgb(50 50 50/ 15%);
-}
-
-#csharp:before {
-    background-color: rgb(182, 195, 207);
-}
-
-#csharp:after {
-    background-color: rgb(200, 208, 221);
-}
-
-#html {
-    left: 50px;
-    bottom: 10px;
-    background-image: url("/images/html-square1.png");
-    background-size: cover;
-    background-color: rgb(175, 119, 227);
-    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
-}
-
-#html:before {
-    background-color: rgb(189, 154, 221);
-
-}
-
-#html:after {
-    background-color: rgb(205, 188, 221);
-}
-
-
 
 
 /***  Products  ***/
@@ -557,7 +371,7 @@ footer {
     </ul>
 
 </nav>
-
+<!--
 <section class="main">
     <div class="main-text">
         <h2>Welcome to my App Store!</h2>
@@ -567,10 +381,9 @@ footer {
             with styled user interfaces to Web Applications and database scripts.
         </p>
         <br/>
-        <!--So it scrolls to the footer (with email) that has id= footer when clicked-->
+
     </div>
 <div class="hero-image">
-    <!--<div class="cube" id="javascript"><img class="javascript" th:src="@{/images/javascript-square1.png}"/></div>-->
     <div class="cube" id="javascript"><p class="js">JS</p></div>
     <div class="cube" id="html">HTML</div>
     <div class="cube" id="css">CSS</div>
@@ -578,7 +391,7 @@ footer {
     <div class="cube" id="react">React</div>
     <div class="cube" id="java">Java</div>
 </div>
-</section>
+</section>-->
 
 <div>
     <ul class="nav-filter" id="browse">
@@ -606,6 +419,7 @@ footer {
 
 
 <main>
+
     <div class="product-container">
         <div class="product-grid">
             <div th:each="p : ${products}" class="product-box">
