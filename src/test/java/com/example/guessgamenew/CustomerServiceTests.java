@@ -15,8 +15,10 @@ public class CustomerServiceTests {
         customerService = new CustomerService();
     }
 
+    //Add test for Deleting product
+
     @Test
-    void testDecreaseQuantityInCartFunctionality() {
+    void testDecreaseQuantityInCartDecreasesQuantityByOneWhenDecreaseQUantityIsCalled() {
         CartProduct cartProduct = new CartProduct(1L, "Test Product 2", "210", "4");
         customerService.getCart().add(cartProduct);
         customerService.decreaseQuantityInCart(0);
@@ -24,7 +26,7 @@ public class CustomerServiceTests {
     }
 
     @Test
-    void testIncreaseQuantityInCartFunctionality() {
+    void testIncreaseQuantityInCartIncreasesQuantityByOneWhenIncreaseQUantityIsCalled() {
         CartProduct cartProduct = new CartProduct(1L, "Test Product 1", "200", "1");
         customerService.getCart().add(cartProduct);
         customerService.increaseQuantityInCart(0);
