@@ -23,4 +23,11 @@ public class CustomerServiceTests {
         assertEquals("3", customerService.getCart().get(0).getQuantity());
     }
 
+    @Test
+    void testIncreaseQuantityInCartFunctionality() {
+        CartProduct cartProduct = new CartProduct(1L, "Test Product 1", "200", "1");
+        customerService.getCart().add(cartProduct);
+        customerService.increaseQuantityInCart(0);
+        assertEquals("2", customerService.getCart().get(0).getQuantity());
+    }
 }
