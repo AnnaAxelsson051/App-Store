@@ -24,8 +24,23 @@
             background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
             padding: 30px 40px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+            height: 17vh;
         }
 
+        .nav-link-list{
+            display:flex;
+            flex-direction: row;
+            list-style: none;
+            padding:30px;
+        }
+
+        .nav-link{
+            text-decoration: none;
+            font-weight: 700;
+            color: white;
+            padding:30px;
+
+        }
 
 
         .customer-login {
@@ -121,7 +136,15 @@
 </head>
 <body>
 <nav>
-    <p class="customer-login">App store</p>
+    <p class="customer-login">App Store</p>
+    <ul class="nav-link-list">
+        <li>
+            <a class="nav-link" >ABOUT</a>
+        </li>
+        <li>
+            <a class="nav-link" href="#footer">CONTACT</a>
+        </li>
+    </ul>
 </nav>
 <form th:action="@{/shop}" method="post">
   <h2>Login</h2>
