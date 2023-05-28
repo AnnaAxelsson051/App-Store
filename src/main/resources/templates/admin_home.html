@@ -21,6 +21,7 @@
             justify-content: space-between;
             background: linear-gradient(to bottom, #0096c7, #0077b6, #48cae4);
             padding: 30px 40px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
         }
 
         .admin-home {
@@ -42,7 +43,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 45vh;
+        height: 25vh;
         margin-bottom:20px;
     }
 
@@ -55,39 +56,51 @@
     }
 
     .button-container {
-        display: flex;
-        flex-direction: row;
+        /*display: flex;
+        flex-direction: row;*/
         justify-content: center;
-        margin-top: 20px;
+        /*margin-top: 20px;*/
         padding:20px;
         box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+        background: linear-gradient(to bottom,#fef4e2,#f7e7c7,#d4bf94,#a69064);
+        transition: all 2s;
+        border: 2px solid #fff;
+    }
+
+
+    form{
+        display: flex;
+        flex-direction: column;
     }
 
     .button {
         display: inline-block;
-        font-size: 24px;
-        padding: 20px 40px;
+        font-size: 20px;
+        /*padding: 20px 40px;*/
+        padding: 15px 35px;
         cursor: pointer;
         transition: all 0.3s ease;
         flex: 1;
-        margin: 0 10px;
-        background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+        /*margin: 0 10px;*/
+        margin:10px;
+        background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
         border: none;
         color: white;
     }
 
     .button:hover {
-        transform: translateY(-5px);
-        background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+        transform: translateY(-2px);
+        background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
     }
 
     .product-button {
-        margin-right: 10px;
+    /*    margin-right: 10px;*/
     }
 
     .order-button {
-        margin-left: 10px;
+    /*  margin-left: 10px;*/
     }
     </style>
 
@@ -101,9 +114,9 @@
     <div class="outer-container">
   <div class="button-container">
     <form>
-      <button type="submit" formaction="/newproduct" class="button product-button">New product</button>
-      <button type="submit" formaction="/unhandled" class="button order-button">Unhandled orders</button>
-      <button type="submit" formaction="/handled" class="button order-button">Handled orders</button>
+      <button type="submit" formaction="/newproduct" class="button product-button">Add a new product</button>
+      <button type="submit" formaction="/unhandled" class="button order-button">View unhandled orders</button>
+      <button type="submit" formaction="/handled" class="button order-button">View handled orders</button>
     </form>
   </div>
     </div>
