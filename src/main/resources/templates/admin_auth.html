@@ -34,23 +34,75 @@
             background-color: white;
             font-family: "Raleway", sans-serif;
         }
-        form {
+        form {/*
             background-color: white;
             padding: 40px;
             box-shadow: 0px 0px 10px #888888;
             margin: 100px auto;
+            width: 400px;*/
+
+            background-color: white;
+            padding: 40px;
+            /* box-shadow: 0px 0px 10px #888888;*/
+            box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+            margin: 100px auto;
             width: 400px;
         }
+
+        /*      h2 {
+            text-align: center;
+            color: blue;
+            margin-bottom: 20px;
+        }*/
+
+        h2 {
+            text-align: center;
+            /*color: #33a7cc;*/
+            /*color: #a69064;*/
+            color:black;
+            margin-bottom: 20px;
+            animation-name: moveInLeft;
+            animation-duration: 5s;
+            animation-timing-function: ease-out;
+            backface-visibility: hidden;
+        }
+
+        @keyframes moveInLeft {
+            0% {
+                opacity: 0;
+                /*att den först ska va osynlig*/
+                transform: translateX(-100px);
+                /*translates it in the x direction, and makes it be more to the left
+              }
+              80% {
+                transform: translatex(10px);
+                /*så att den lite innan den slutar (på 80%) studsar till vänster*/
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+
         input[type=text], input[type=password] {
-            display: block;
+           /* display: block;
             padding: 10px;
             margin: 10px 0;
             width: 100%;
             border: none;
+            box-shadow: 0px 0px 5px #888888;*/
+
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+            border: none;
+            /*box-shadow: 0px 0px 5px #888888;*/
+            /*box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);*/
             box-shadow: 0px 0px 5px #888888;
         }
         input[type=submit] {
-            cursor: pointer;
+           /* cursor: pointer;
             background-color: red;
             color: white;
             padding: 15px;
@@ -58,20 +110,40 @@
             border: none;
             width: 100%;
             box-shadow: 0px 0px 5px #888888;
+            transition: all 0.3s ease;*/
+
+            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight:400;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            /*box-shadow: 0px 0px 5px #888888;*/
+            box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
         }
         input[type=submit]:hover {
+            /*
             background-color: #2196f3;
             transform: translateY(-5px);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);*/
+
+            /*background-color: #2196f3;*/
+            background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
+            transform: translateY(-3px);
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
         }
-        h2 {
-            text-align: center;
-            color: blue;
-            margin-bottom: 20px;
-        }
+
         label {
-            color: green;
+            /*color: green;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;*/
+            /*color: #666666;*/
+            color:black;
             font-size: 16px;
             font-weight: bold;
             margin-bottom: 5px;
@@ -80,7 +152,7 @@
 </head>
 <body>
 <nav>
-    <p class="admin-login">Admin Login</p>
+    <p class="admin-login">App Store</p>
 </nav>
 <form th:action="@{/adminauth}" method="post">
   <h2>Login</h2>
