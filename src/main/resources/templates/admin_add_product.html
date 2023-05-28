@@ -28,45 +28,58 @@
             font-size: 50px;
             font-weight: bold;
             color:white;
-            /*font-family: "Pinyon Script";*/
-            font-family: "Raleway";
+            font-family: "Raleway", sans-serif;
         }
 
         form {
+           /*  display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0px 0px 10px #888888;
+            box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+            margin: 100px auto;
+            width: 400px;*/
+            background: linear-gradient(to bottom,#fef4e2,#f7e7c7,#d4bf94,#a69064);
             display: flex;
             flex-direction: column;
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            border: 1px solid #ccc;
-            /*border-radius: 10px;*/
-            font-family: "Raleway", sans-serif;
-        }
+            /*border: 1px solid #ccc;*/
+           box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+           font-family: "Raleway", sans-serif;
+       }
 
 
 
-        h3 {
-            padding-top: 4%;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-            font-family: "Raleway", sans-serif;
-        }
+       h3 {
+           padding-top: 4%;
+           font-size: 24px;
+           font-weight: bold;
+           text-align: center;
+           margin-bottom: 20px;
+           font-family: "Raleway", sans-serif;
+       }
 
 
-        input[type="text"] {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            /*border-radius: 5px;*/
+       input[type="text"] {
+           padding: 10px;
+           margin-bottom: 10px;
+           /*border: 1px solid #ccc;*/
+           border: 2px solid #fff8eca2;
+           background-color: rgba(227, 216, 197, 0.64);
+           /*border-radius: 5px;*/
             font-size: 16px;
             font-family: "Raleway", sans-serif;
         }
 
+        input[type="text"]:focus {
+            outline: none;
+        }
+
 
         input[type="submit"] {
-            background-color: red;
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -74,6 +87,21 @@
             font-size: 16px;
             cursor: pointer;
             font-family: "Raleway", sans-serif;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+            margin-top: 10px;
+            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+            transition: all 0.2s;
+        }
+
+        input[type="submit"]:hover,
+        input[type="submit"]:active
+        {
+            background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
+            /*background: linear-gradient(to bottom, #d3c097, #988050, #75613a);*/
+            color: white;
+            transition: 0.3s;
+            /*box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);*/
+            transform: translateY(-3px);
         }
 
 
@@ -93,7 +121,6 @@
                 .button-link {
                     display: inline-block;
                     padding: 10px 20px;
-                    background-color: green;
                     color: #fff;
                     border: none;
                     font-size: 16px;
@@ -101,7 +128,18 @@
                     font-family: "Raleway", sans-serif;
                     text-decoration: none;
                     margin-top: 1%;
+                    background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
                 }
+
+        .button-link:hover,
+        .button-link:active
+        {
+            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+            color: white;
+            transition: 0.3s;
+
+        }
 
 
 
@@ -112,7 +150,7 @@
 </head>
 <body>
 <nav>
-    <p class="add-product">Add Product</p>
+    <p class="add-product">App Store</p>
 </nav>
 <h3>New product</h3>
 <form th:action="@{/newproduct}" method="post" th:object="${product}">
