@@ -58,21 +58,26 @@
       background-color: white;
       /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);*/
       box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+      border: 2px solid #fff8eca2;
 
     }
 
     th, td {
-      padding: 15px;
       text-align: center;
-      border-bottom: 1px solid #444343;
     }
 
     th {
-      background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
-
+      background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
       color: white;
       font-size: 24px;
       font-weight: bold;
+      padding: 15px;
+    }
+
+    td{
+      padding: 5px;
+      background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+
     }
 
     tr:hover {
@@ -81,28 +86,37 @@
 
     form {
       display: inline-block;
+      background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
     }
 
     input[type="hidden"], button[type="submit"] {
       display: inline-block;
-      padding: 10px 20px;
-      border: none;
-      background-color: lawngreen;
+      padding: 7px 15px;
+      background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
       color: white;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s ease;
+
+      border: 2px solid white;
     }
 
     button[type="submit"]:hover {
-      background-color: #50636b;
+      background: linear-gradient(to bottom, rgb(236, 175, 255), rgb(214, 96, 250), rgb(190, 8, 246));
+      /*background: linear-gradient(to bottom, #0096c7, #0e8fd3, #189be1, #48cae4);*/
+      transform: translateY(-3px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+    }
+
+    button[type="submit"]:active {
+      transform: translateY(3px);
     }
   </style>
 </head>
 <body>
 <nav>
-  <p class="unhandled-orders">App Store</p>
+  <p class="unhandled-orders">Unhandled Orders</p>
 </nav>
 <!--<h1>Unhandled Orders</h1>-->
 <table>
