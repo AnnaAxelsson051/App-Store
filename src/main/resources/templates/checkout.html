@@ -15,6 +15,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
         }
 
         nav {
@@ -34,13 +35,25 @@
             font-family: "Raleway";
         }
 
+        h2{
+            margin-top: 50px;
+            margin-bottom: 15px;
+            margin-left: 70px;
+        }
+
+        h3{
+            margin-top: 20px;
+        }
+
         .container {
             background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
             color: white;
             /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);*/
             box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-            margin: 5rem;
-
+            margin-left:70px;
+            margin-right:70px;
+            padding:20px;
+            border: 2px solid #fff8eca2;
         }
 
         .cell {
@@ -67,8 +80,8 @@
 
         .cart-sum {
             display: flex;
-            margin-right: 65px;
             margin-top: 15px;
+            margin-left: 20px;
         }
 
 
@@ -76,15 +89,14 @@
 </head>
 <body>
 <nav>
-    <p class="order-confirmation">Order Confirmation</p>
+    <p class="order-confirmation">App Store</p>
 </nav>
-
+<h2>Order confirmation</h2>
 <div class="container">
-
     <div class="grid">
-        <h2>Name</h2>
-        <h2>Quantity</h2>
-        <h2>Price</h2>
+        <h3>Name</h3>
+        <h3>Quantity</h3>
+        <h3>Price</h3>
     </div>
     <div class="cart-line"></div>
     <div th:each="p : ${cart}" class="grid">
@@ -94,7 +106,7 @@
     </div>
     <div class="cart-line"></div>
     <div class="cart-sum">
-        <p>Total :&nbsp;</p>
+        <p class="total">Total :&nbsp;</p>
         <p th:text="${cartsum}"></p>
     </div>
 </div>
