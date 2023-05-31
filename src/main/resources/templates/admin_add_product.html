@@ -105,6 +105,10 @@
             margin-top: 20px;
         }
 
+        .added-product{
+            margin-bottom: 10px;
+        }
+
                 .button-link {
                     display: inline-block;
                     padding: 10px 20px;
@@ -146,10 +150,11 @@
     Price: <input type="text" th:field="*{price}" />
     Description: <input type="text" th:field="*{description}" />
     <input type="submit" value="Add product"/>
+    <br>
 </form>
-<p> <span th:text="${addedProduct}"></span></p>
 
 <div class="button-link-container">
+    <p class="added-product"> <span th:text="${addedProduct}"></span></p>
     <a href="/adminpage" class="button-link">Back to Admin Page</a>
 </div>
 </body>
