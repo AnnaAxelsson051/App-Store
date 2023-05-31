@@ -12,7 +12,7 @@ An E-Commerce App Store with separate login for customers and administrators. Th
 - Thymeleaf
 - HTML
 - CSS
-- Mockito
+- JUnit
 - Animations
 
 ---
