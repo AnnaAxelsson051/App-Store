@@ -27,6 +27,21 @@
             height: 17vh;
         }
 
+        .nav-link-list{
+            display:flex;
+            flex-direction: row;
+            list-style: none;
+            padding:30px;
+        }
+
+        .nav-link{
+            text-decoration: none;
+            font-weight: 700;
+            color: white;
+            padding:30px;
+
+        }
+
         .order-confirmation {
             font-size: 50px;
             font-weight: bold;
@@ -90,6 +105,14 @@
 <body>
 <nav>
     <p class="order-confirmation">App Store</p>
+    <ul class="nav-link-list">
+        <li>
+            <a class="nav-link" >ABOUT</a>
+        </li>
+        <li>
+            <a class="nav-link" href="#footer">CONTACT</a>
+        </li>
+    </ul>
 </nav>
 <h2>Order confirmation</h2>
 <div class="container">
