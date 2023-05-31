@@ -1,10 +1,8 @@
-package se.anna.repository;
+package com.appstore.repository;
 
+import com.appstore.model.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import se.anna.model.Admin;
-
-import java.util.List;
 
 
 @Repository

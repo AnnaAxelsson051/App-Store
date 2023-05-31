@@ -1,4 +1,4 @@
-package se.anna.model;
+package com.appstore.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

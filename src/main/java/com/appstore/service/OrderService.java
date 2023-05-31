@@ -1,9 +1,9 @@
-package se.anna.service;
+package com.appstore.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import se.anna.model.Orders;
-import se.anna.repository.OrderRepository;
+import com.appstore.model.Orders;
+import com.appstore.repository.OrderRepository;
 
 import java.util.List;
 

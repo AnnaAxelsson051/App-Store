@@ -1,13 +1,13 @@
-package se.anna.controller;
+package com.appstore.controller;
 
+import com.appstore.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import se.anna.model.Product;
-import se.anna.service.ProductService;
+import com.appstore.service.ProductService;
 
 @Controller
 public class ProductController {

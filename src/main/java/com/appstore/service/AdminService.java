@@ -1,9 +1,9 @@
-package se.anna.service;
+package com.appstore.service;
 
+import com.appstore.model.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import se.anna.model.Admin;
-import se.anna.repository.AdminRepository;
+import com.appstore.repository.AdminRepository;
 
 
 @Service

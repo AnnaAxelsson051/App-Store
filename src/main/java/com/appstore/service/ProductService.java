@@ -1,9 +1,9 @@
-package se.anna.service;
+package com.appstore.service;
 
+import com.appstore.model.Product;
+import com.appstore.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import se.anna.model.Product;
-import se.anna.repository.ProductRepository;
 
 import java.util.List;
 
@@ -54,7 +54,7 @@ public class ProductService {
         }
     }
 
-    private void updateProduct(Product product) {
+    public void updateProduct(Product product) {
         if (productRepository.existsByName(product.getName())) {
             Product existingProduct = productRepository.findProductByName(product.getName()).get(0);
             existingProduct.setPrice(product.getPrice());

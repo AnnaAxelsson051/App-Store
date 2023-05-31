@@ -1,7 +1,7 @@
-package se.anna.repository;
+package com.appstore.repository;
 
+import com.appstore.model.Orders;
 import org.springframework.data.jpa.repository.JpaRepository;
-import se.anna.model.Orders;
 
 import java.util.List;
 

@@ -1,6 +1,4 @@
-package com.example.guessgamenew;
+package com.appstore;
 
 public class OrderServiceTests {
-
-
 }

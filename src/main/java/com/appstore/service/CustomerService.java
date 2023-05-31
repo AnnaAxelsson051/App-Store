@@ -1,13 +1,13 @@
-package se.anna.service;
+package com.appstore.service;
 
+import com.appstore.model.Customer;
+import com.appstore.model.Orders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
-import se.anna.model.CartProduct;
-import se.anna.model.Customer;
-import se.anna.model.Orders;
-import se.anna.repository.CustomerRepository;
-import se.anna.repository.OrderRepository;
+import com.appstore.model.CartProduct;
+import com.appstore.repository.CustomerRepository;
+import com.appstore.repository.OrderRepository;
 
 import java.util.ArrayList;
 import java.util.List;
