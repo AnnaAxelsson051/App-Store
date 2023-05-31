@@ -18,7 +18,11 @@ An E-Commerce App Store with separate login for customers and administrators. Th
 ---
 ![Screenshot 2023-05-31 at 20 54 28](https://github.com/AnnaAxelsson051/E-Commerce-Store-New/assets/103879144/8708aa15-2605-462b-988a-109ed60b5b09)
 
+![Screenshot 2023-05-31 at 22 26 45](https://github.com/AnnaAxelsson051/E-Commerce-Store-New/assets/103879144/96061004-9885-4d1e-9dbe-eaa65d201b08)
+
 ![Screenshot 2023-05-31 at 22 04 22](https://github.com/AnnaAxelsson051/E-Commerce-Store-New/assets/103879144/9fe8b30b-8b0e-4c2c-94ad-35ff7e27c66f)
+
+![Screenshot 2023-05-31 at 22 27 14](https://github.com/AnnaAxelsson051/E-Commerce-Store-New/assets/103879144/f46d7128-8255-417b-9e97-cf872432fb75)
 
 ![Screenshot 2023-05-31 at 21 30 17](https://github.com/AnnaAxelsson051/E-Commerce-Store-New/assets/103879144/51f0290c-fdae-4898-82eb-136c80e24c22)
 
