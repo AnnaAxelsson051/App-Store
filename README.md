@@ -2,7 +2,7 @@
 
 ## Description
 
-The store has a separate login for customers and administrators. The customer can view products, filter by category or search by product name, place items in cart, view updated subtotal, increase and decrease item amount or delete items from cart, as well as check out and receive an order confirmation. Admin can view processed and unprocessed orders, mark an order as processed and add as well as update products in the product system.  
+An E-Commerce App Store with separate login for customers and administrators. The customer is able to filter products by category or search by product name, place products in cart and view updated subtotal as well as increase, decrease and delete products from cart, and finally check out and receive an order confirmation. Admin can view processed and unprocessed orders, mark an order as processed and add as well as update products in the product system.   
 
 ## Technologies used
 
