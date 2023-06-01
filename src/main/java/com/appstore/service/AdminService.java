@@ -8,6 +8,8 @@ import com.appstore.repository.AdminRepository;
 
 @Service
 public class AdminService {
+
+    //Handles authentication of admin
     @Autowired
     AdminRepository adminRepository;
 

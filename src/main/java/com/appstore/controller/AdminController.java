@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.appstore.service.AdminService;
 
+
+//Beldung om att skicka bekräftelsemail när man lagt order
+//gmail
 @Controller
 public class AdminController {
 

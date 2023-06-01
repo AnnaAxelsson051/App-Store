@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
             rel="stylesheet"
     />
-    <title>Title</title>
+    <title>Admin Add Product</title>
     <style>
 
         * {
@@ -30,41 +30,37 @@
         .add-product {
             font-size: 50px;
             font-weight: bold;
-            color:white;
+            color: white;
             font-family: "Raleway", sans-serif;
         }
 
         form {
-            background: linear-gradient(to bottom,#fef4e2,#f7e7c7,#d4bf94,#a69064);
+            background: linear-gradient(to bottom, #fef4e2, #f7e7c7, #d4bf94, #a69064);
             display: flex;
             flex-direction: column;
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            /*border: 1px solid #ccc;*/
-           box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-           font-family: "Raleway", sans-serif;
-       }
+            box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+            font-family: "Raleway", sans-serif;
+        }
 
 
+        h3 {
+            padding-top: 4%;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Raleway", sans-serif;
+        }
 
-       h3 {
-           padding-top: 4%;
-           font-size: 24px;
-           font-weight: bold;
-           text-align: center;
-           margin-bottom: 20px;
-           font-family: "Raleway", sans-serif;
-       }
 
-
-       input[type="text"] {
-           padding: 10px;
-           margin-bottom: 10px;
-           /*border: 1px solid #ccc;*/
-           border: 2px solid #fff8eca2;
-           background-color: rgba(227, 216, 197, 0.64);
-           /*border-radius: 5px;*/
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #fff8eca2;
+            background-color: rgba(227, 216, 197, 0.64);
             font-size: 16px;
             font-family: "Raleway", sans-serif;
         }
@@ -78,7 +74,7 @@
             color: #fff;
             padding: 10px 20px;
             border: none;
-           /* border-radius: 5px;*/
+            /* border-radius: 5px;*/
             font-size: 16px;
             cursor: pointer;
             font-family: "Raleway", sans-serif;
@@ -89,13 +85,10 @@
         }
 
         input[type="submit"]:hover,
-        input[type="submit"]:active
-        {
+        input[type="submit"]:active {
             background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
-            /*background: linear-gradient(to bottom, #d3c097, #988050, #75613a);*/
             color: white;
             transition: 0.3s;
-            /*box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);*/
             transform: translateY(-3px);
         }
 
@@ -105,33 +98,31 @@
             margin-top: 20px;
         }
 
-        .added-product{
+        .added-product {
             margin-bottom: 10px;
         }
 
-                .button-link {
-                    display: inline-block;
-                    padding: 10px 20px;
-                    color: #fff;
-                    border: none;
-                    font-size: 16px;
-                    cursor: pointer;
-                    font-family: "Raleway", sans-serif;
-                    text-decoration: none;
-                    margin-top: 1%;
-                    background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
-                }
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: "Raleway", sans-serif;
+            text-decoration: none;
+            margin-top: 1%;
+            background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+        }
 
         .button-link:hover,
-        .button-link:active
-        {
+        .button-link:active {
             background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
             color: white;
             transition: 0.3s;
 
         }
-
 
 
         .button-link:hover {
@@ -145,16 +136,16 @@
 </nav>
 <h3>New product</h3>
 <form th:action="@{/newproduct}" method="post" th:object="${product}">
-    Name: <input type="text" th:field="*{name}" />
-    Category: <input type="text" th:field="*{category}" />
-    Price: <input type="text" th:field="*{price}" />
-    Description: <input type="text" th:field="*{description}" />
+    Name: <input type="text" th:field="*{name}"/>
+    Category: <input type="text" th:field="*{category}"/>
+    Price: <input type="text" th:field="*{price}"/>
+    Description: <input type="text" th:field="*{description}"/>
     <input type="submit" value="Add product"/>
     <br>
 </form>
 
 <div class="button-link-container">
-    <p class="added-product"> <span th:text="${addedProduct}"></span></p>
+    <p class="added-product"><span th:text="${addedProduct}"></span></p>
     <a href="/adminpage" class="button-link">Back to Admin Page</a>
 </div>
 </body>

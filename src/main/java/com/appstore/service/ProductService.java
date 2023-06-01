@@ -9,6 +9,11 @@ import java.util.List;
 
 @Service
 public class ProductService {
+
+    //The class handles both customer interaction with products in store
+    // and admin adding/updating products
+
+    /* Section handles customer interactions with products in store*/
     Product product;
 
     @Autowired

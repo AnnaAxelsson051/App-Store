@@ -16,6 +16,9 @@ import java.util.List;
 @SessionScope
 public class CustomerService {
 
+    //The class handles authentication of customers, displaying categories and cart to customer
+    // plus cart functionalities like increase, decrease, delete items in cart
+    // as customer interacts with the store
     @Autowired
     CustomerRepository customerRepository;
     @Autowired
@@ -42,6 +45,7 @@ public class CustomerService {
 
     //List of products in cart
     private List<CartProduct> cartProducts = new ArrayList<>();
+
 
     //Returning a list of cartproducts for updating the cart
     public List<CartProduct> getCart() {

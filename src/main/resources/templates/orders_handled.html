@@ -2,13 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
             rel="stylesheet"
     />
-    <title>Processed Orders</title>
+    <title>Handles Orders</title>
     <style>
 
         * {
@@ -29,59 +29,49 @@
         .handled-orders {
             font-size: 50px;
             font-weight: bold;
-            color:white;
-            /*font-family: "Pinyon Script";*/
+            color: white;
             font-family: "Raleway";
         }
 
 
         body {
-        font-family: "Raleway", sans-serif;
-        color: white;
-    }
+            font-family: "Raleway", sans-serif;
+            color: white;
+        }
 
-    h1 {
-        padding-top: 5%;
-        font-size: 48px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 30px;
-    }
+        h1 {
+            padding-top: 5%;
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
         th {
-            /*background: linear-gradient(to bottom, #d3c097, #988050, #75613a);*/
             background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
             color: white;
-            tranition:all 1s;
+            tranition: all 1s;
         }
 
-    table {
-        margin: 60px auto;
-        border-collapse: collapse;
-        width: 50%;
-background-color: #a69064;
-        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-    }
-
-    th, td {
-        padding: 12px;
-        text-align: left;
-        border: 2px solid #fff8eca2;
-    }
-
-
-    tbody tr:nth-child(even) {
-        background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
-        /*background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);*/
-    }
-
-    tbody tr:hover {
-
-    }
-
-        tbody tr:nth-child(even):hover {
-            /*background: linear-gradient(to bottom, #0096c7, #0e8fd3, #189be1, #48cae4);*/
+        table {
+            margin: 60px auto;
+            border-collapse: collapse;
+            width: 50%;
+            background-color: #a69064;
+            box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
         }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 2px solid #fff8eca2;
+        }
+
+
+        tbody tr:nth-child(even) {
+            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+        }
+
 
     </style>
 </head>
@@ -90,7 +80,6 @@ background-color: #a69064;
 <nav>
     <p class="handled-orders">Handled Orders</p>
 </nav>
-<!--<h1>Handled Orders</h1>-->
 <table>
     <thead>
     <tr>

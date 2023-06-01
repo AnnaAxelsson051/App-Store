@@ -10,6 +10,7 @@ import java.util.List;
 @Service
 public class OrderService {
 
+    //Handles admin interacting with orders plust saving customer order
     @Autowired
     OrderRepository orderRepository;
 

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
             rel="stylesheet"
@@ -29,26 +29,26 @@
         .app-store {
             font-size: 50px;
             font-weight: bold;
-            color:white;
-            /*font-family: "Pinyon Script";*/
+            color: white;
             font-family: "Raleway";
         }
+
         body {
             background-color: white;
             font-family: "Raleway", sans-serif;
             color: black;
         }
 
-        .login-as{
-            margin-top:15px;
+        .login-as {
+            margin-top: 15px;
             margin-right: 20px;
             font-size: 25px;
             font-family: "Pinyon script", sans-serif;
-            color:white;
+            color: white;
         }
 
-        .button-containers{
-            display:flex;
+        .button-containers {
+            display: flex;
             flex-direction: row;
         }
 
@@ -56,117 +56,109 @@
             display: inline-block;
             font-size: 20px;
             margin-top: 5px;
-            /*font-weight: bold;*/
             padding: 15px 30px;
-            border-radius:50px;
+            border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             border: none;
-            color:white;
+            color: white;
             background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
         }
 
         .button-nav:hover {
             transform: translateY(-2px);
-            /*background: linear-gradient(to bottom, #d3c097, #988050, #75613a);*/
-            /*background: linear-gradient(to bottom, #0cace0, #1296dc, #64e1fa);*/
             color: white;
             box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
         }
 
         .customer-nav {
 
-            /*background: linear-gradient(to bottom, rgba(241, 225, 191, 0.49), rgba(185, 162, 115, 0.5), rgba(166, 144, 100, 0.47));*/
             margin-right: 30px;
         }
 
         .admin-nav {
 
-            /* background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);*/
             margin-right: 30px;
         }
 
 
-        /*** Hero section ***/
+        /****************** Hero section *******************/
 
         /*** text ***/
+
         .main {
             height: 70vh;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            /*padding: 30px;*/
             padding: 10px;
             font-family: "Raleway";
         }
 
 
-          h2 {
-              font-size: 35px;
-              font-weight: 800;
+        h2 {
+            font-size: 35px;
+            font-weight: 800;
             display: block;
             animation-name: moveInLeft;
             animation-duration: 5s;
             animation-timing-function: ease-out;
             backface-visibility: hidden;
             font-family: Raleway;
-            /*gör så att texten inte studsar i slutet om den skulle göra det*/
-          }
+        }
 
-          .descriptive-text {
+        .descriptive-text {
             display: block;
-              font-weight:400;
+            font-weight: 400;
             animation: moveInRight 5s ease-out;
             font-family: Raleway;
-          }
+        }
 
 
-          @keyframes moveInLeft {
+        @keyframes moveInLeft {
             0% {
-              opacity: 0;
-              /*att den först ska va osynlig*/
-              transform: translateX(-100px);
-              /*translates it in the x direction, and makes it be more to the left on x asis*/
+                opacity: 0;
+                transform: translateX(-100px);
+                /*translates it in the x direction, and makes it be more to the left on x asis*/
             }
             80% {
-              transform: translatex(10px);
-              /*så att den lite innan den slutar (på 80%) studsar till vänster*/
+                transform: translatex(10px);
+                /*så att den lite innan den slutar (på 80%) studsar till vänster*/
             }
             100% {
-              opacity: 1;
-              transform: translate(0);
+                opacity: 1;
+                transform: translate(0);
             }
-          }
+        }
 
-          @keyframes moveInRight {
+        @keyframes moveInRight {
             0% {
-              opacity: 0;
-              transform: translateX(100px);
+                opacity: 0;
+                transform: translateX(100px);
             }
             80% {
-              transform: translatex(-10px);
+                transform: translatex(-10px);
             }
             100% {
-              opacity: 1;
-              transform: translate(0);
+                opacity: 1;
+                transform: translate(0);
             }
-          }
-
+        }
 
 
         .main-text {
             width: 50%;
             padding: 30px;
             margin-bottom: 60px;
-            margin-top:40px;
+            margin-top: 40px;
             line-height: 1.5;
-            font-weight:600;
+            font-weight: 600;
         }
 
         a {
-            color:rgb(162, 0, 255);
+            color: rgb(162, 0, 255);
             font-size: 20px;
             text-decoration: none;
             font-weight: 300;
@@ -179,8 +171,8 @@
             width: 50%;
             height: 350px;
             margin-bottom: 140px;
-            margin-right:20px;
-            margin-top:60px;
+            margin-right: 20px;
+            margin-top: 60px;
             display: block;
             /*margin-bottom: 80px;*/
 
@@ -217,82 +209,82 @@
 
         /********************* Text on floating icons ***********************/
 
-        .javascript{
+        .javascript {
             font-size: 25px;
             font-weight: bold;
-            color:white;
+            color: white;
             font-family: "Raleway";
-            margin-top:20px;
-            margin-left:23px;
+            margin-top: 20px;
+            margin-left: 23px;
         }
 
-        .java{
+        .java {
             font-size: 25px;
             font-weight: bold;
-            color:white;
+            color: white;
             font-family: "Raleway";
-            margin-top:19px;
-            margin-left:13px;
+            margin-top: 19px;
+            margin-left: 13px;
         }
 
-        .css{
+        .css {
             font-size: 25px;
             font-weight: bold;
-            color:white;
+            color: white;
             font-family: "Raleway";
-            margin-top:20px;
-            margin-left:16px;
+            margin-top: 20px;
+            margin-left: 16px;
         }
 
-        .html{
+        .html {
             font-size: 25px;
             font-weight: bold;
-            color:white;
+            color: white;
             font-family: "Raleway";
-            margin-top:19px;
-            margin-left:7px;
-        }
-        
-        .react{
-              font-size: 25px;
-              font-weight: bold;
-              color:white;
-              font-family: "Raleway";
-              margin-top:17px;
-              margin-left:5px;
+            margin-top: 19px;
+            margin-left: 7px;
         }
 
-        .csharp{
+        .react {
             font-size: 25px;
-            font-weight: bold;          
-            color:white;                
-            font-family: "Raleway";     
-            margin-top:17px;
-            margin-left:22px;
+            font-weight: bold;
+            color: white;
+            font-family: "Raleway";
+            margin-top: 17px;
+            margin-left: 5px;
+        }
+
+        .csharp {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            font-family: "Raleway";
+            margin-top: 17px;
+            margin-left: 22px;
 
         }
 
-        /********************** Floating icons *********************/
+        /********************** Floating boxes with shadows under *********************/
 
         #java {
             left: 100px;
-            bottom:150px;
+            bottom: 150px;
             background-size: cover;
             /*background-color: rgb(119, 227, 186);   */
-           background-color:black;
-           /* background-color: rgb(119, 227, 186);*/
+            background-color: black;
+            /* background-color: rgb(119, 227, 186);*/
             box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
 
         }
 
         #java:before {
-           /* background-color: rgb(154, 221, 202);     */
-             background-color: rgb(182, 195, 207);
+            /* background-color: rgb(154, 221, 202);     */
+            background-color: rgb(182, 195, 207);
 
         }
 
         #java:after {
-           /* background-color: rgb(188, 221, 212);    */
+            /* background-color: rgb(188, 221, 212);    */
             background-color: rgb(200, 208, 221);
         }
 
@@ -378,10 +370,6 @@
             background-color: rgb(205, 188, 221);
         }
 
-
-
-
-
     </style>
 </head>
 <body>
@@ -410,7 +398,6 @@
         <!--So it scrolls to the footer (with email) that has id= footer when clicked-->
     </div>
     <div class="hero-image">
-        <!--<div class="cube" id="javascript"><img class="javascript" th:src="@{/images/javascript-square1.png}"/></div>-->
         <div class="cube" id="javascript"><p class="javascript">JS</p></div>
         <div class="cube" id="html"><p class="html">HTML</p></div>
         <div class="cube" id="css"><p class="css">CSS</p></div>
@@ -419,15 +406,8 @@
         <div class="cube" id="java"><p class="java">Java</p></div>
     </div>
 </section>
-<!--
-<div class="container">
-    <div class="button-container">
-        <form>
-            <button type="submit" formaction="/customerauth" class="button customer">Customer</button>
-            <button type="submit" formaction="/adminauth" class="button admin">Administrator</button>
-        </form>-->
 
-    </div>
+</div>
 </div>
 </body>
 </html>

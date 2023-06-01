@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Herr+Von+Muellerhoff&family=Ibarra+Real+Nova:wght@500;600;700&family=Pinyon+Script&family=Playfair+Display:wght@400;500;900&family=Questrial&family=Raleway:wght@200;300;800;900&family=Viaoda+Libre&display=swap"
             rel="stylesheet"
     />
-    <title>Title</title>
+    <title>Admin Home</title>
     <style>
-       * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         nav {
             display: flex;
@@ -28,81 +28,66 @@
         .admin-home {
             font-size: 50px;
             font-weight: bold;
-            color:white;
-            /*font-family: "Pinyon Script";*/
+            color: white;
             font-family: "Raleway";
         }
 
-    body {
-        background-color: white;
-        font-family: "Raleway", sans-serif;
-        color: white;
-    }
+        body {
+            background-color: white;
+            font-family: "Raleway", sans-serif;
+            color: white;
+        }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 25vh;
-        margin-bottom:20px;
-    }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 25vh;
+            margin-bottom: 20px;
+        }
 
-    h1 {
-        padding-top: 7%;
-        font-size: 48px;
-        /*font-weight: bold;*/
-        text-align: center;
-        margin-bottom: 40px;
-    }
+        h1 {
+            padding-top: 7%;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-    .button-container {
-        /*display: flex;
-        flex-direction: row;*/
-        justify-content: center;
-        /*margin-top: 20px;*/
-        padding:30px;
-        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-        background: linear-gradient(to bottom,#fef4e2,#f7e7c7,#d4bf94,#a69064);
-        transition: all 2s;
-        border: 2px solid #fff;
-    }
+        .button-container {
+            justify-content: center;
+            padding: 30px;
+            box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+            background: linear-gradient(to bottom, #fef4e2, #f7e7c7, #d4bf94, #a69064);
+            transition: all 2s;
+            border: 2px solid #fff;
+        }
 
 
-    form{
-        display: flex;
-        flex-direction: column;
-    }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .button {
-        display: inline-block;
-        font-size: 20px;
-        /*padding: 20px 40px;*/
-        padding: 15px 35px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        flex: 1;
-        /*margin: 0 10px;*/
-        margin:10px;
-        background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
-        border: none;
-        color: white;
-    }
+        .button {
+            display: inline-block;
+            font-size: 20px;
+            padding: 15px 35px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            margin: 10px;
+            background: linear-gradient(to bottom, #d3c097, #988050, #75613a);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
+            border: none;
+            color: white;
+        }
 
-    .button:hover {
-        transform: translateY(-2px);
-        background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
-        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-    }
-
-    .product-button {
-    /*    margin-right: 10px;*/
-    }
-
-    .order-button {
-    /*  margin-left: 10px;*/
-    }
+        .button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(to bottom, #f1e1bf, #b9a273, #a69064);
+            box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+        }
     </style>
 
 </head>
@@ -113,13 +98,13 @@
 <h1>Welcome, <span th:text="${adminName}"></span></h1>
 <div class="container">
     <div class="outer-container">
-  <div class="button-container">
-    <form>
-      <button type="submit" formaction="/newproduct" class="button product-button">Add a new product</button>
-      <button type="submit" formaction="/unhandled" class="button order-button">View unhandled orders</button>
-      <button type="submit" formaction="/handled" class="button order-button">View handled orders</button>
-    </form>
-  </div>
+        <div class="button-container">
+            <form>
+                <button type="submit" formaction="/newproduct" class="button product-button">Add a new product</button>
+                <button type="submit" formaction="/unhandled" class="button order-button">View unhandled orders</button>
+                <button type="submit" formaction="/handled" class="button order-button">View handled orders</button>
+            </form>
+        </div>
     </div>
 </div>
 </body>
