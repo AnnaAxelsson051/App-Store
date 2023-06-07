@@ -12,7 +12,7 @@ import com.appstore.service.ProductService;
 @Controller
 public class ProductController {
 
-    //Handles admin adding and updating products in the store
+    //Class handles admin adding and updating products in the store
 
     @Autowired
     ProductService productService;

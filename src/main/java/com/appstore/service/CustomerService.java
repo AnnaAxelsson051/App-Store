@@ -34,7 +34,6 @@ public class CustomerService {
     String selectedCategory = "all";
 
 
-    //If a customer exists return it otherwise create a new user
     public Customer getAuthenticatedCustomer(String username, String password) {
         if (customerRepository.existsByUsernameAndPassword(username, password)) {
             selectedCustomer = customerRepository.getCustomersByUsername(username);
@@ -44,28 +43,23 @@ public class CustomerService {
         return selectedCustomer;
     }
 
-    //Getting the category that was selected
     public String getSelectedCategory() {
         return this.selectedCategory;
     }
 
 
-    //List of products in cart
     private List<CartProduct> cartProducts = new ArrayList<>();
 
-
-    //Returning a list of cartproducts for updating the cart
     public List<CartProduct> getCart() {
         return this.cartProducts;
     }
 
-    //Showing products depending on selected category
     public String setAndGetCategory(String category) {
         this.selectedCategory = category;
         return this.selectedCategory;
     }
 
-    //Adding product to cart
+
     public void addProductToCart(Long productId,
                                  String productName,
                                  String price,
@@ -77,12 +71,13 @@ public class CustomerService {
                 quantity
         ));
     }
+
     public String selectAll() {
         this.selectedCategory = "all";
         return this.selectedCategory;
     }
 
-    //Decreasing, increasing and deleting cartproducts
+
     public List<CartProduct> decreaseQuantityInCart(int index) {
         this.cartProducts.get(index).decrQuantity();
         return this.cartProducts;
@@ -98,8 +93,7 @@ public class CustomerService {
         return this.cartProducts;
     }
 
-    //Calculating quantity * price, rounding off number,
-    //displaying cart content and price
+
     public String calculateCartValue() {
         double sum = 0;
         for (CartProduct p : this.cartProducts) {
@@ -111,7 +105,6 @@ public class CustomerService {
         return returnSum;
     }
 
-    // Creating an order and sending an email to customer with order details
 
     public List<CartProduct> createOrder() {
         Orders orders = new Orders();

@@ -14,7 +14,7 @@ import java.util.List;
 @Controller
 public class OrderController {
 
-    //Handles viewing orders for admin and marking them as handeled
+    //Class handles admin viewing orders and marking them as handeled
     @Autowired
     OrderService orderService;
 

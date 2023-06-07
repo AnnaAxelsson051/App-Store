@@ -43,7 +43,7 @@ public class ProductService {
         }
     }
 
-    /*Admin updating products*/
+    /*Section handles admin updating products*/
 
     public void setProduct(Product product) {
         this.product = product;

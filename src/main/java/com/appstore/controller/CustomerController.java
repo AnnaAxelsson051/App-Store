@@ -14,7 +14,7 @@ import com.appstore.service.ProductService;
 @SessionScope
 public class CustomerController {
 
-    //Handels customer log in and actions withtaken by the customer in the store
+    // Class handels customer log in and actions withtaken by the customer in the store
     // like filtering products by category, searching a product, adding a product
     // to cart and modifying content quantity in cart as well as checking out
 
@@ -24,12 +24,11 @@ public class CustomerController {
     ProductService productService;
 
 
-    @GetMapping("/customerauth") // Redirects to customer login
+    @GetMapping("/customerauth")
     public String authenticateCustomer() {
         return "customer_auth";
     }
 
-    //Authentication for customer when logging into the store
     @PostMapping("/shop")
     public String displayShopToCustomer(@RequestParam String username,
                                         @RequestParam String password,
@@ -42,7 +41,7 @@ public class CustomerController {
         return "shop";
     }
 
-    //Displaying products depending on selected category
+
     @GetMapping(value = "/shop")
     public String filterProductsByCategory(@RequestParam(name = "selectedCategory") String category,
                                            Model model) {
@@ -54,7 +53,6 @@ public class CustomerController {
         return "shop";
     }
 
-    //Allowing user to search for specific product
     @GetMapping("/search")
     public String filterProductByProductName(@RequestParam(name = "searchProductName") String queryName,
                                              Model model) {
@@ -67,8 +65,6 @@ public class CustomerController {
         return "shop";
     }
 
-
-    //Adding a product to cart
     @PostMapping("/addproduct")
     public String addProductToCart(@RequestParam Long productId,
                                    @RequestParam String productName,
@@ -90,7 +86,6 @@ public class CustomerController {
     }
 
 
-    // Deleting a product from the cart
     @PostMapping("/deleteproduct")
     public String deleteProductInCart(@RequestParam int indexToRemove,
                                       Model model) {
@@ -103,7 +98,6 @@ public class CustomerController {
     }
 
 
-    //Decreasing and increasing quantity in cart
     @PostMapping("/decreasequantity")
     public String decreaseProductQuantityInCart(@RequestParam int indexToModify,
                                                 Model model) {
@@ -125,8 +119,7 @@ public class CustomerController {
         model.addAttribute("cartsum", customerService.calculateCartValue());
         return "shop";
     }
-
-    //Customer checking out
+    
     @GetMapping("/checkout")
     public String checkoutCart(Model model) {
         model.addAttribute("cart", customerService.createOrder());
