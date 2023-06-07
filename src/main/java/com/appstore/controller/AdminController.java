@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.appstore.service.AdminService;
 
 
-//Beldung om att skicka bekräftelsemail när man lagt order
-//gmail
+
 @Controller
 public class AdminController {
 
-    //Handels admin login
+    // Class handels admin login
 
     @Autowired
     AdminService adminService;

@@ -23,7 +23,6 @@ public class CustomerController {
     @Autowired
     ProductService productService;
 
-
     @GetMapping("/customerauth")
     public String authenticateCustomer() {
         return "customer_auth";
@@ -40,7 +39,6 @@ public class CustomerController {
         model.addAttribute("selectedCategory", customerService.getSelectedCategory());
         return "shop";
     }
-
 
     @GetMapping(value = "/shop")
     public String filterProductsByCategory(@RequestParam(name = "selectedCategory") String category,
@@ -85,7 +83,6 @@ public class CustomerController {
         return "shop";
     }
 
-
     @PostMapping("/deleteproduct")
     public String deleteProductInCart(@RequestParam int indexToRemove,
                                       Model model) {
@@ -96,7 +93,6 @@ public class CustomerController {
         model.addAttribute("cartsum", customerService.calculateCartValue());
         return "shop";
     }
-
 
     @PostMapping("/decreasequantity")
     public String decreaseProductQuantityInCart(@RequestParam int indexToModify,
@@ -119,7 +115,7 @@ public class CustomerController {
         model.addAttribute("cartsum", customerService.calculateCartValue());
         return "shop";
     }
-    
+
     @GetMapping("/checkout")
     public String checkoutCart(Model model) {
         model.addAttribute("cart", customerService.createOrder());

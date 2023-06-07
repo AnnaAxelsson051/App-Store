@@ -9,15 +9,13 @@ import com.appstore.repository.AdminRepository;
 @Service
 public class AdminService {
 
-    //Handles authentication of admin
+    // Class handles authentication of admin
     @Autowired
     AdminRepository adminRepository;
-
 
     public boolean authenticateAdminByNameAndPassword(String username, String password) {
         return adminRepository.existsByUsernameAndPassword(username, password);
     }
-
 
     public Admin getAdmin(String username){
         return adminRepository.getAdminByUsername(username);

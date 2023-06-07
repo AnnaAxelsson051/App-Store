@@ -19,7 +19,7 @@ import java.util.Properties;
 @SessionScope
 public class CustomerService {
 
-    //The class handles authentication of customers, displaying categories and cart to customer
+    // Class handles authentication of customer, displaying categories and cart to customer
     // plus cart functionalities like increase, decrease, delete items in cart
     // as customer interacts with the store
     @Autowired
@@ -32,7 +32,6 @@ public class CustomerService {
 
     Customer selectedCustomer;
     String selectedCategory = "all";
-
 
     public Customer getAuthenticatedCustomer(String username, String password) {
         if (customerRepository.existsByUsernameAndPassword(username, password)) {
@@ -47,7 +46,6 @@ public class CustomerService {
         return this.selectedCategory;
     }
 
-
     private List<CartProduct> cartProducts = new ArrayList<>();
 
     public List<CartProduct> getCart() {
@@ -58,7 +56,6 @@ public class CustomerService {
         this.selectedCategory = category;
         return this.selectedCategory;
     }
-
 
     public void addProductToCart(Long productId,
                                  String productName,
@@ -77,7 +74,6 @@ public class CustomerService {
         return this.selectedCategory;
     }
 
-
     public List<CartProduct> decreaseQuantityInCart(int index) {
         this.cartProducts.get(index).decrQuantity();
         return this.cartProducts;
@@ -93,7 +89,6 @@ public class CustomerService {
         return this.cartProducts;
     }
 
-
     public String calculateCartValue() {
         double sum = 0;
         for (CartProduct p : this.cartProducts) {
@@ -104,8 +99,7 @@ public class CustomerService {
 
         return returnSum;
     }
-
-
+    
     public List<CartProduct> createOrder() {
         Orders orders = new Orders();
         orders.setCustomer_id(this.selectedCustomer.getId());
