@@ -1,8 +1,10 @@
 package com.appstore.service;
 
+import com.appstore.EmailServiceImpl;
 import com.appstore.model.Customer;
 import com.appstore.model.Orders;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 import com.appstore.model.CartProduct;
@@ -11,6 +13,7 @@ import com.appstore.repository.OrderRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 @Service
 @SessionScope
@@ -23,6 +26,10 @@ public class CustomerService {
     CustomerRepository customerRepository;
     @Autowired
     OrderRepository orderRepository;
+
+    @Autowired
+    EmailServiceImpl emailServiceImpl;
+
     Customer selectedCustomer;
     String selectedCategory = "all";
 
@@ -92,7 +99,7 @@ public class CustomerService {
     }
 
     //Calculating quantity * price, rounding off number,
-    // displaying cart content and price
+    //displaying cart content and price
     public String calculateCartValue() {
         double sum = 0;
         for (CartProduct p : this.cartProducts) {
@@ -104,16 +111,18 @@ public class CustomerService {
         return returnSum;
     }
 
-    // Creating an order receiving the list of cartproducts
-    //Adding customer id and cartproducts to the order and
-    //saving order returnig a list of cartproducts to caller
+    // Creating an order and sending an email to customer with order details
 
     public List<CartProduct> createOrder() {
         Orders orders = new Orders();
         orders.setCustomer_id(this.selectedCustomer.getId());
         orders.addOrderLine(this.cartProducts);
         orderRepository.save(orders);
+        emailServiceImpl.sendSimpleMessage("reza.alimolaei51@gmail.com", "Order Confirmation", "Thanks for your order!" + orders);
         return this.cartProducts;
     }
 
 }
+
+
+

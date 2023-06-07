@@ -129,7 +129,6 @@ public class CustomerController {
     //Customer checking out
     @GetMapping("/checkout")
     public String checkoutCart(Model model) {
-
         model.addAttribute("cart", customerService.createOrder());
         model.addAttribute("products", productService.getProducts(customerService.getSelectedCategory()));
         model.addAttribute("categories", productService.getCategories());
